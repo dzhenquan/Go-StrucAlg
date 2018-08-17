@@ -14,7 +14,10 @@ func TestLinkedList_Insert(t *testing.T) {
 	}
 	fmt.Println(list.FindFirst())
 	fmt.Println(list.FindLast())
-	list.PrintList()
+
+	for i := 0; i < 6; i++ {
+		fmt.Println(list.Find(i))
+	}
 }
 
 func TestLinkedList_Reverse(t *testing.T) {
@@ -25,10 +28,14 @@ func TestLinkedList_Reverse(t *testing.T) {
 	}
 	fmt.Println(list.FindFirst())
 	fmt.Println(list.FindLast())
-	list.PrintList()
+	for i := 0; i < 6; i++ {
+		fmt.Println(list.Find(i))
+	}
 
 	list.Reverse()
 	fmt.Println(list.FindFirst())
 
-	//list.PrintList()
+	for i := 0; i < 6; i++ {
+		fmt.Println(list.Find(i))
+	}
 }

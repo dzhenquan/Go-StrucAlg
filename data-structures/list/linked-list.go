@@ -1,7 +1,5 @@
 package list
 
-import "fmt"
-
 type node struct {
 	value 	interface{}
 	prev 	*node
@@ -196,12 +194,4 @@ func (list *LinkedList) RemoveLast() {
 	last_node.value = nil
 	list.size--
 	last_node = nil
-}
-
-func (list *LinkedList) PrintList() {
-	current := list.head
-	for i := 0; i < list.size; i++ {
-		fmt.Println(current.value)
-		current = current.next
-	}
 }
